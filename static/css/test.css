@@ -1,0 +1,127 @@
+html, body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;       
+    margin:  0;          
+    padding: 0;         
+     /* background-image: url(../Bienvenue.jpg); 
+     background-size: cover; 
+    background-position: center; 
+    filter: blur(8px);*/
+    display: flex;      
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*pour les telephones et talettes:*/
+@media screen and (max-width:992px){
+    .containerr .form{
+        /*flex-grow: 1;*/
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        align-content:center;
+        box-shadow: 10px 10px 20px 10px  #0480fd, -10px -10px 20px 10px #0480fd;
+        border-radius:5px;
+        border: solid 3px;
+        color: gray;
+        
+        
+        
+    } 
+    .containerr a{
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        
+    }
+    .containerr h2{
+        text-align: center;
+    }
+    .containerr .input{
+        display: block;
+        
+        width: 330px;
+        height: 35px;
+        border-radius:30px;
+        text-align: center;
+    } 
+   .rapel{
+        background-color: aqua;
+
+    }
+    .containerr .button{
+        background-color: #0480fd;
+        color: white;
+
+    }
+    .containerr hr{
+        margin-top: 10px;
+    }
+
+}
+/*pour descktop*/
+@media (min-width:993px) {
+    .containerr{
+        display: flex;
+        width: 800px;
+        height: 500px;
+        justify-content: center;
+        box-shadow: 30px 30px 100px 30px #0480fd, 30px -30px 100px 30px #0480fd;
+        border-radius:5px;
+        border: solid 3px;
+        color: gray;
+        margin: auto;
+    }
+    .containerr .image{
+        background-image: url(./formimag.png);
+        background-size: cover;
+    background-position: center;
+    /* filter: blur(4px); */
+        width: 50%;
+    }
+    .containerr .form{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        align-content:center;
+        
+        width: 50%;
+    } 
+    .containerr a{
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        
+    }
+    .containerr h2{
+        text-align: center;
+    }
+    .containerr .input{
+        display: block;        
+        width: 330px;
+        height: 35px;
+        border-radius:30px;
+        text-align: center;
+    } 
+   .rapel{
+        background-color: aqua;
+
+    }
+    .containerr .button{
+        background-color: #0480fd;
+        color: white;
+        height: 40px;
+
+    }
+    .containerr .button:hover{
+        background-color: hsl(210, 100%, 56%);
+    }
+    .containerr hr{
+        margin-top: 10px;
+    }
+    
+    
+}
