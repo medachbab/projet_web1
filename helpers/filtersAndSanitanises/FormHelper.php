@@ -11,6 +11,14 @@ class FormHelper {
 
     return (float) $inputText;
   }
+  public function validatetextinput($inputText, $redirectUrl = "/"){
+    $comment = filter_var($_POST['comment'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+
+  if (strlen($comment) > 200) {
+    die("Comment is too long! Please keep it under 200 characters.");
+  }
+  
+  }
 }
 // class InputValidator {
 //     public static function validateAndSanitizePasswordFirstConn($password, $redirectUrl = "../") {

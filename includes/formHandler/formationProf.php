@@ -1,4 +1,7 @@
 <?php
+require "../../helpers/autoloader.php";
+Autoloader::register();
+use classes\cours\controler\AddCourseContr;
 session_start();
 if(isset($_POST['submit'])){
     $file = $_FILES['file'];
@@ -26,10 +29,12 @@ if(isset($_POST['submit'])){
             if($fileSize < 1000000000){
                 $fileNewName = $moduleId . "_" . $nospaces . "." . $fileActualExtention;
                 $fileDestination = '../../uploads/cours/' . $fileNewName;
-                $_SESSION["uploadedfilename"] = $fileNewName;
-                $_SESSION["uploadedfilemoduleid"] = $moduleId;
-                move_uploaded_file($fileTmpName, $fileDestination);
-                header("location: ../../routing/routing.php?controler=cours&action=f3");
+                $obj = new AddCourseContr($fileNewName, $moduleId);
+                $obj->addCoursecont();
+                //$_SESSION["uploadedfilename"] = $fileNewName;
+                //$_SESSION["uploadedfilemoduleid"] = $moduleId;
+                //move_uploaded_file($fileTmpName, $fileDestination);
+                //header("location: ../../routing/routing.php?controler=cours&action=f3");
 
             }else{
                 echo "le fichier que vous voulez entrer a une grande taille veuillez diminuer sa taille et le rentrer a nouveau!";

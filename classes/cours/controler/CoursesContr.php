@@ -43,13 +43,13 @@
             CoursesContr::requireview("user_consults_modules_courses", $result);
             // require_once "C:\\xampp\htdocs\projet_web\classes\cours\\view\user_consults_modules_courses.php";    
         }
-        public function addCoursecont(){
-            $moduleId = $_SESSION["uploadedfilemoduleid"]; 
-            $fileNewName = $_SESSION["uploadedfilename"];
-            $this->addCourse($fileNewName, $moduleId);
-            header("Location: routing.php?controler=cours&action=f2");
-            exit();
-        }
+        // public function addCoursecont(){
+        //     $moduleId = $_SESSION["uploadedfilemoduleid"]; 
+        //     $fileNewName = $_SESSION["uploadedfilename"];
+        //     $this->addCourse($fileNewName, $moduleId);
+        //     header("Location: routing.php?controler=cours&action=f2");
+        //     exit();
+        // }
         public function deletecoursecont() {
             if(!empty($_SESSION["dcourseid"])){
                 $id_cours = $_SESSION["dcourseid"];
