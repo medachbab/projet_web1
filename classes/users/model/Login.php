@@ -99,31 +99,31 @@ class Login extends Dbh{
                 header("location: ../../index.php?error=hqdqusernotfound");
                 exit();
             }
-            $user = $test->fetchAll(PDO::FETCH_ASSOC);
+            $user = $test->fetch(PDO::FETCH_ASSOC);
             session_start();
             $_SESSION["role"] = $userRole;
-            $_SESSION["nom"] = $user[0]["nom"];
-            $_SESSION["prenom"] = $user[0]["prenom"];
+            $_SESSION["nom"] = $user["nom"];
+            $_SESSION["prenom"] = $user["prenom"];
+            $_SESSION["photo"] = $user["photo"];
             if($userRole == "etudiant"){        
-                $_SESSION["userid"] = $user[0]["id"];
-                $_SESSION["usernumber"] = $user[0]["num_etudiant"];
-                $_SESSION["useruid"] = $user[0]["mail_etudiant"];
-                $_SESSION["id_filiere"] = $user[0]["id_filiere"];
-                $_SESSION["id_niveau"] = $user[0]["id_niveau"];
-                $_SESSION["photo"] = $user[0]["photo"];
+                $_SESSION["userid"] = $user["id"];
+                $_SESSION["usernumber"] = $user["num_etudiant"];
+                $_SESSION["useruid"] = $user["mail_etudiant"];
+                $_SESSION["id_filiere"] = $user["id_filiere"];
+                $_SESSION["id_niveau"] = $user["id_niveau"];                
                 header("location: ../../classes/users/view/studentpersonalpage.php");
                 //header("location: ../../classes\users\\view\studentpersonalpage.php");
                 exit();
             }
             else if($userRole == "prof"){        
-                $_SESSION["userid"] = $user[0]["id_prof"];
-                $_SESSION["useruid"] = $user[0]["mail_prof"];
+                $_SESSION["userid"] = $user["id_prof"];
+                $_SESSION["useruid"] = $user["mail_prof"]; 
                 header("location: ../../classes/users/view/profpersonelpage.php");
                 exit();
             }
             else if($userRole == "admin"){   
-                $_SESSION["userid"] = $user[0]["id_admin"];
-                $_SESSION["useruid"] = $user[0]["mail_admin"];
+                $_SESSION["userid"] = $user["id_admin"];
+                $_SESSION["useruid"] = $user["mail_admin"];
                 header("location: ../../classes/users/view/adminpersonelpage.php");
                 exit();     
                 //echo"en cours de developement";

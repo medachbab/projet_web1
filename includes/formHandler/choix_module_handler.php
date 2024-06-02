@@ -31,11 +31,6 @@ if(isset($_POST['submit'])){
         $_SESSION["id_module"] = $id_module;
         unset($_SESSION["etudiant-consulter"]);
         header("location: ../../routing/routing.php?controler=annonce&action=f8");
-    }elseif(isset($_SESSION["prof-modifier-note"]) && $_SESSION["prof-modifier-note"]== "etudiants"){
-        $id_module = $_POST["module"];
-        $_SESSION["id_module"] = $id_module;
-        unset($_SESSION["prof-modifier-note"]);
-        header("location: ../../routing/routing.php?controler=note&action=f4");
     }
     
 }

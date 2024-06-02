@@ -1,6 +1,5 @@
 <?php
 require_once './conn.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +15,6 @@ require_once './conn.php';
   <label for="module">Module:</label> 
   <?php
 require_once './modulem.php';
-
   ?>
   
     <button type="submit" >Ajouter</button>

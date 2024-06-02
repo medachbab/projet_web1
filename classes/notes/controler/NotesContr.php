@@ -21,6 +21,10 @@
             $id_module = $_SESSION["id_module"];
             global $students; 
             $students = $this->getgradsbymoduleid($id_module); 
+            $_SESSION["note-a-la-premiere-fois"] = 0;
+            if(is_null($students[0]["id_notes"])){
+                $_SESSION["note-a-la-premiere-fois"] = 1;
+            }
             require_once "../classes/notes/view/prof_modifier_note_etudiant.php"; 
         }
         

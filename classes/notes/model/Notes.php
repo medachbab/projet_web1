@@ -16,11 +16,11 @@
                 //j'essai de retourner un tableau associative ou le nom_du_module->key et id_module->value
                 $modules = [];
                 while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
-                $module_name = $row['nom_module'];
-                $module_id = $row['id_module'];           
-                $modules[$module_name] = $module_id;
+                    $module_name = $row['nom_module'];
+                    $module_id = $row['id_module'];           
+                    $modules[$module_name] = $module_id;
+                }
                 return $modules;
-            }
             }catch(PDOException $e){
                 echo "err".$e->getMessage();
             }
@@ -72,12 +72,12 @@
             try{
                 $req=$this->connect()->prepare("SELECT e.*, notes.*
                                     FROM etudiant2 e
-                                    INNER JOIN notes ON notes.id_etudiant = e.id
+                                    LEFT JOIN notes ON notes.id_etudiant = e.id and notes.id_module= ?
                                     INNER JOIN niveau n ON e.id_niveau = n.id_niveau
                                     INNER JOIN module m ON m.id_niveau = n.id_niveau
                                     WHERE m.id_module= ?
                                     ORDER BY notes.moyenne DESC; ");
-                $req->execute(array($id_module)); 
+                $req->execute(array($id_module, $id_module)); 
                 $result =  $req->fetchAll(PDO::FETCH_ASSOC);
                 return $result;
             }catch(PDOException $e){

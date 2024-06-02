@@ -59,7 +59,8 @@
             
         }
         protected function getmodulesannouncements($id_module){
-            $req =$this->connect()->prepare("SELECT * FROM annonce WHERE id_module= ? AND annonce_suprimer = 0");
+            $req =$this->connect()->prepare("SELECT * FROM annonce WHERE id_module= ? AND annonce_suprimer = 0
+                                            ORDER BY date_heure_auto DESC");
             $req->execute(array($id_module)); 
             $result= $req->fetchAll(PDO::FETCH_ASSOC);
             $tmp = $this->getteachersacademicmailbymoduleid($id_module);
@@ -72,7 +73,8 @@
             return $gresult;
         }
         protected function getlevelsannouncements($id_level){
-            $req =$this->connect()->prepare("SELECT * FROM annonce WHERE id_niveau= ?");
+            $req =$this->connect()->prepare("SELECT * FROM annonce WHERE id_niveau= ?
+                                            ORDER BY date_heure_auto DESC");
             $req->execute(array($id_level)); 
             $result= $req->fetchAll(PDO::FETCH_ASSOC);
             $tmp = $this->getteachersacademicmailbymoduleid($id_level);

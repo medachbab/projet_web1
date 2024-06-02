@@ -22,22 +22,21 @@
                 <div class="Nom"><?php echo  $_SESSION["nom"] . " " . $_SESSION["prenom"]?></div> 
         </div>
         <div class="Services">
-        <ul>
+            <ul>
                         <div class="Comp"><li><div class="icon"><i class="fa-solid fa-book"></i></div><a href="routing.php?controler=cours&action=f2">ajouter un cours</a></li></div>
                         <div class="Comp"><li><div class="icon"><i class="fa-regular fa-bell"></i></div><a href="routing.php?controler=annonce&action=f5">ajouter un annonce</a></li></div>
                         <div class="Comp"><li><div class="icon"><i class="fa-solid fa-scroll"></i></div><a href="routing.php?controler=annonce&action=f7">consulter mes annonces</a></li></div>
-                        <div class="Comp"><li><div class="icon"><i class="fa-brands fa-github"></i></div><a href="routing.php?controler=note&action=f1">noter les etudiants</a></li></div>
-                        <div class="Comp"><li><div class="icon"><i class="fa-brands fa-github"></i></div><a href="routing.php?controler=cours&action=f14">consulter mes cours</a></li></div>
-                        <div class="Comp"><li><div class="icon"><i class="fa-brands fa-github"></i></div><a href="routing.php?controler=annonce&action=f17">annonces des niveaux</a></li></div>
-                        <div class="Comp"><li><div class="icon"><i class="fa-brands fa-github"></i></div><a href="routing.php?controler=note&action=f3">modifier notes des etudiants</a></li></div>
-                        <div class="Comp"><li><div class="icon"><i class="fa-brands fa-github"></i></div><a href="routing.php?controler=cours&action=f16">consulter mes cours privés</a></li></div>
-                        <div class="Comp"><li><div class="icon"><i class="fa-brands fa-github"></i></div><a href="../module/">marquer l'abscence</a></li></div>
-                    </ul>
+                        <div class="Comp"><li><div class="icon"><i class="fa-solid fa-check"></i></div><a href="routing.php?controler=note&action=f1">noter mes etudiants</a></li></div>
+                        <div class="Comp"><li><div class="icon"><i class="fa-solid fa-school"></i></div><a href="routing.php?controler=cours&action=f14">consulter mes cours</a></li></div>
+                        <div class="Comp"><li><div class="icon"><i class="fa-regular fa-bell"></i></div><a href="routing.php?controler=annonce&action=f17">annonces des niveaux</a></li></div>
+                        <div class="Comp"><li><div class="icon"><i class="fa-solid fa-lock"></i></div><a href="routing.php?controler=cours&action=f16">consulter mes cours privés "suprimé"</a></li></div>
+                        <div class="Comp"><li><div class="icon"><i class="fa-solid fa-marker"></i></div><a href="../module/">marquer l'abscence</a></li></div>
+            </ul>
         </div>
 
     </div>
     <div class="content overflow-auto">
-    <?php require_once 'C:\xampp\htdocs\projet_web\includes\entete_inc.php';?> 
+    <?php //require_once 'C:\xampp\htdocs\projet_web\includes\entete_inc.php';?> 
         <div class="container w-70 mt-5">
         <?php
                     if(isset($_SESSION["grades_seted"])){
@@ -100,7 +99,7 @@
                                         <td><input type="text" name="<?php echo $student["id"]. "_n2"?>" class="form-control" value="<?php echo $student["note2"]?>" required></td>
                                         <td><input type="text" name="<?php echo $student["id"]. "_n3"?>" class="form-control" value="<?php echo $student["note3"]?>" required></td>
                                         <td><input type="text" name="" class="form-control" value="<?php echo $student["moyenne"]?>" disabled></td>
-                                        <td><input type="text" name="" class="form-control" value="<?php if($student["valider"] == 1) echo "V"; else echo "R"?>" disabled></td>                    
+                                        <td><input type="text" name="" class="form-control" value="<?php if($student["valider"] == 1) echo "V"; elseif($student["valider"] == 0) echo "R"; else echo "";?>" disabled></td>                    
                                     </tr>
                                     <?php
                                 }                

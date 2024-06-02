@@ -29,6 +29,7 @@ if(isset($_POST['submit'])){
             if($fileSize < 1000000000){
                 $fileNewName = $moduleId . "_" . $nospaces . "." . $fileActualExtention;
                 $fileDestination = '../../uploads/cours/' . $fileNewName;
+                move_uploaded_file($fileTmpName, $fileDestination);
                 $obj = new AddCourseContr($fileNewName, $moduleId);
                 $obj->addCoursecont();
                 //$_SESSION["uploadedfilename"] = $fileNewName;

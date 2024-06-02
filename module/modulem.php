@@ -8,7 +8,7 @@
   ?>
   <!-- TDIA1 -->
           <select id="module" name="module" required>
-              <option value="">Sélectionner un module</option>
+              <option value="">Sélectionner un module de TDIA1</option>
               <option value="">S1</option>
               <option value="3">Computer Architectures and Organisation</option>
               <option value="3">Architecture d'entreprise et Transformation Digital</option>
@@ -39,7 +39,7 @@
   ?>
   <!-- ID1 -->
    <select id="module" name="module" required>
-              <option value="">Sélectionner un module</option>
+              <option value="">Sélectionner un module de ID1</option>
               <option value="">S1</option>
 
               <option value="6">Analyse Numérique Matricielle/Statistique Inférentielle</option>
@@ -73,7 +73,7 @@
   ?>
   <!-- GI1 -->
       <select id="module" name="module" required>
-            <option value="">Sélectionner un module</option>
+            <option value="">Sélectionner un module de GI1</option>
             <option value="">S1</option>
 
             <option value="9">Architecture des ordinateurs</option>
@@ -106,7 +106,7 @@
   ?>
   <!-- TDIA2 -->
           <select id="module" name="module" required>
-              <option value="">Sélectionner un module</option>
+              <option value="">Sélectionner un module de TDIA2</option>
               <option value="">S3</option>
 
               <option value="4">Architecture Logicielle et UML</option>
@@ -138,7 +138,7 @@
   ?>
   <!-- ID2 -->
    <select id="module" name="module" required>
-              <option value="">Sélectionner un module</option>
+              <option value="">Sélectionner un module de ID2</option>
               <option value="">S3</option>
 
               <option value="7">Architecture Logicielle et UML</option>
@@ -174,7 +174,7 @@
   
   <!-- GI2 -->
       <select id="module" name="module" required>
-            <option value="">Sélectionner un module</option>
+            <option value="">Sélectionner un module de GI2</option>
             <option value="">S3</option>
 
             <option value="10">Administration Système Linux</option>
@@ -208,7 +208,7 @@
 
   <!-- TDIA3 -->
           <select id="module" name="module" required>
-              <option value="">Sélectionner un module</option>
+              <option value="">Sélectionner un module de TDIA3</option>
               <option value="">S5</option>
 
               <option value="5">Architecture Logicielle et UML</option>
@@ -240,7 +240,7 @@
   ?>
   <!-- ID3 -->
    <select id="module" name="module" required>
-              <option value="">Sélectionner un module</option>
+              <option value="">Sélectionner un module de ID3</option>
               <option value="">S5</option>
 
               <option value="8">Big Data Visualisation</option>
@@ -271,7 +271,7 @@
   ?>
   <!-- GI3 -->
       <select id="module" name="module" required>
-            <option value="">Sélectionner un module</option>
+            <option value="">Sélectionner un module de GI3</option>
             <option value="">S5</option>
 
             <option value="11">Cryptographie et Sécurité Informatique</option>

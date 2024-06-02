@@ -3,7 +3,7 @@
     $Nom = "";
     $prenom = "";
     $gmail = "";
-    $hashed_pass = "";
+    //$hashed_pass = "";
     $num_etudiant = "";
     $id_niveau = "";
     $id_filiere = "";
@@ -28,19 +28,19 @@
             
             } 
 
-            $sql = "INSERT INTO etudiant2 (nom, prenom, e_mail_personnel, num_etudiant, id_niveau, id_filiere, mail_etudiant) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO etudiant2 (nom, prenom, e_mail_personnel, num_etudiant, id_niveau, id_filiere, mail_etudiant) VALUES ( ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
             $stmt->execute([$Nom, $prenom, $gmail, $num_etudiant, $id_niveau, $id_filiere, $mail_etudiant]);
             
             if (!$stmt){
-                //$errorMessage="Invalid query: ".$conn->error;
+                $errorMessage="Invalid query: ".$conn->error;
                 break;
             }
 
                 $Nom = "";
                 $prenom = "";
                 $gmail = "";
-                ///$hashed_pass = "";
+                //$hashed_pass = "";
                 $num_etudiant = "";
                 $id_niveau = "";
                 $id_filiere = "";

@@ -1,6 +1,8 @@
 <?php
-require_once "../../helpers/autoloader.php";
 use classes\users\controler\LoginContraddpass;
+require_once "../../helpers/autoloader.php";
+Autoloader::register();
+
 session_start();
 if(isset($_POST['submit'])){
 

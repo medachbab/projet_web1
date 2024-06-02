@@ -1,7 +1,7 @@
-
- <?php
+<?php
 require_once './etudiant.php';
 require_once './conn.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,3 +66,4 @@ require_once './conn.php';
   </div>
 </body>
 </html>
+

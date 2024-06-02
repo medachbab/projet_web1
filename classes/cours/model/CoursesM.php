@@ -52,7 +52,8 @@
         }
         protected function getcoursesbymoduleid($id_module){
             $req=$this->connect()->prepare("SELECT * FROM cour
-                                            WHERE id_module=? AND cours_suprimer = 0");
+                                            WHERE id_module=? AND cours_suprimer = 0
+                                            ORDER BY date_publication_cours DESC");
             $req->execute(array($id_module));
             $courses = $req->fetchAll(PDO::FETCH_ASSOC); 
             return $courses;  

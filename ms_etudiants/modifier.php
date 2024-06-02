@@ -42,15 +42,15 @@ require_once './modifier_etudiant.php';
             <div class="row mb-3">
                 <label class="col-sm-3 col_form-label"> gmail</label>
                 <div class=" col-sm-6">
-                    <input type="text" class="form-control" name="gmail"  value="<?php echo $gmail;?>">
+                    <input type="text" class="form-control" name="e_mail_personnel"  value="<?php echo $gmail;?>">
                 </div>
             </div>
-            <div class="row mb-3">
-                <label class="col-sm-3 col_form-label"> hashed_pass</label>
-                <div class=" col-sm-6">
-                    <input type="text" class="form-control" name="hashed_pass"  value="<?php echo $hashed_pass;?>">
-                </div>
-            </div>   
+            <!--<div class="row mb-3">-->
+            <!--    <label class="col-sm-3 col_form-label"> hashed_pass</label>-->
+            <!--    <div class=" col-sm-6">-->
+            <!--        <input type="text" class="form-control" name="hashed_pass"  value="<?php echo $hashed_pass;?>">-->
+            <!--    </div>-->
+            <!--</div>   -->
             <div class="row mb-3">
             <label class="col-sm-3 col_form-label"> num_etudiant</label>
             <div class=" col-sm-6">

@@ -1,9 +1,9 @@
 <?php
 
-$bd = "id22241174_baseetudiant";
+$bd = "baseetudiant";
 $dr = "mysql:host=localhost;dbname=$bd";
-$root = "id22241174_projet";
-$paswrd = "MoH@@0102";
+$root = "root";
+$paswrd = "";
 
 try {
     $conn = new PDO($dr, $root, $paswrd);

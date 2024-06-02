@@ -26,15 +26,15 @@
         </div>
         <div class="Services">
                     <ul>
-                        <div class="Comp"><li><div class="icon"><i class="fa-solid fa-envelope"></i></div><a href="../../../routing/routing.php?controler=cours&action=f1">consulter mes cours</a></li></div>
-                        <div class="Comp"><li><div class="icon"><i class="fa-brands fa-github"></i></div><a href="../../../routing/routing.php?controler=annonce&action=f9">consulter les annonces de scolarité</a></li></div>
-                        <div class="Comp"><li><div class="icon"><i class="fa-brands fa-github"></i></div><a href="../../../routing/routing.php?controler=annonce&action=f10">consulter les annonces de ma class</a></li></div>
+                        <div class="Comp"><li><div class="icon"><i class="fa-solid fa-book"></i></div><a href="../../../routing/routing.php?controler=cours&action=f1">consulter mes cours</a></li></div>
+                        <div class="Comp"><li><div class="icon"><i class="fa-regular fa-bell"></i></div><a href="../../../routing/routing.php?controler=annonce&action=f9">consulter les annonces de scolarité</a></li></div>
+                        <div class="Comp"><li><div class="icon"><i class="fa-solid fa-envelope"></i></div><a href="../../../routing/routing.php?controler=annonce&action=f10">consulter les annonces de ma class</a></li></div>
                     </ul> 
         </div>
 
     </div>
     <div class="content">
-    <?php require_once 'C:\xampp\htdocs\basededonne\projet_web_V2\projet_web\includes\entete_inc.php';?> 
+    <?php //require_once 'C:\xampp\htdocs\basededonne\projet_web_V2\projet_web\includes\entete_inc.php';?> 
         <!--div class="container w-50">
         <div class="card ">
             <div class="card-header"><h2>hi there</h2></div>

@@ -5,7 +5,7 @@ require_once './conn.php';
     $Nom = "";
     $prenom = "";
     $gmail = "";
-    $hashed_pass = "";
+   // $hashed_pass = "";
     $num_etudiant = "";
     $id_niveau = "";
     $id_filiere = "";
@@ -32,7 +32,7 @@ require_once './conn.php';
         $Nom = $row["nom"];
         $prenom = $row["prenom"];
         $gmail = $row["e_mail_personnel"];
-        $hashed_pass = $row["hashed_pass"];
+       // $hashed_pass = $row["hashed_pass"];
         $num_etudiant = $row["num_etudiant"];
         $id_niveau = $row["id_niveau"];
         $id_filiere = $row["id_filiere"];
@@ -42,26 +42,25 @@ require_once './conn.php';
         $Nom = $_POST["nom"];
         $prenom = $_POST["prenom"];
         $gmail = $_POST["e_mail_personnel"];
-        $hashed_pass = $_POST["hashed_pass"];
+       // $hashed_pass = $_POST["hashed_pass"];
         $num_etudiant = $_POST["num_etudiant"];
         $id_niveau = $_POST["id_niveau"];
         $id_filiere = $_POST["id_filiere"];
         $mail_etudiant = $_POST["mail_etudiant"];
 
         do{
-            if ( empty($id) ||empty($Nom) || empty($prenom) || empty($gmail) || empty($hashed_pass) || empty($num_etudiant) || empty($id_niveau) || empty($id_filiere) || empty($mail_etudiant)) {
+            if ( empty($id) ||empty($Nom) || empty($prenom) || empty($gmail)  || empty($num_etudiant) || empty($id_niveau) || empty($id_filiere) || empty($mail_etudiant)) {
                 $errorMessage = "All the fields are required";
                 
                 
             } 
-            $sql = "UPDATE etudiant2 SET nom = ?, prenom = ?, e_mail_personnel = ?, hashed_pass = ?, num_etudiant = ?, id_niveau = ?, id_filiere = ?, mail_etudiant = ? WHERE id = ?";
+            $sql = "UPDATE etudiant2 SET nom = ?, prenom = ?, e_mail_personnel = ?, num_etudiant = ?, id_niveau = ?, id_filiere = ?, mail_etudiant = ? WHERE id = ?";
             $stmt = $conn->prepare($sql);
-            
             if (!$stmt) {
-                //$errorMessage = "Invalid query: " . $conn->error;
+                $errorMessage = "Invalid query: " . $conn->error;
                 break;
             }
-            $stmt->execute([$Nom, $prenom, $gmail, $hashed_pass, $num_etudiant, $id_niveau, $id_filiere, $mail_etudiant, $id]);
+            $stmt->execute([$Nom, $prenom, $gmail, $num_etudiant, $id_niveau, $id_filiere, $mail_etudiant, $id]);
 
             $successMessage = "Étudiant modifié avec succès!";
             header("location: index.php");

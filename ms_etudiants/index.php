@@ -20,7 +20,7 @@
         unset($row);
     
     ?>
-    <div class="container my-5">
+    <div class="container my-5 ">
         <h2>Liste de etudiants </h2>
         <a class="btn btn-primary" href="create.php" role="button">ajouter etudiant</a>
         <br>
@@ -37,6 +37,7 @@
                 <th>id_filiere</th>
                 <th>mail_etudiant</th>
                 <th>photo</th>
+                <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -54,6 +55,8 @@
                     <td><?= $student['photo']; ?></td>
                     <td>  
                         <a class="btn btn-primary btn-sm" href="modifier.php?id=<?= $student['id']; ?>">modifier</a>
+                        </td>
+                        <td>
                         <a class="btn btn-danger btn-sm" href="supprimer.php?id=<?= $student['id']; ?>">suprimer</a>
                     </td>
                 </tr>

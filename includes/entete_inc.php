@@ -40,7 +40,10 @@
         //insert into etudiant2 (nom, prenom, gmail, mdp, numetudiant, filliere) values ('moha', 'matrix', 'mohamatrix@gmail.com', 'moha1111', 'M1111', 'tdia');
         ?>
         <li class="nav-item">
-          <a class="nav-link" href="./includes/logout_inc.php">logout</a>
+        <form action="../includes/formHandler/logout.php" method="post">
+          <button type="submit" class="nav-link" name="logout">Logout</button>
+        </form>
+          
         </li>
         <?php
             }

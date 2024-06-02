@@ -29,11 +29,11 @@ use PhpParser\Node\Stmt\ElseIf_;
         elseif($action == "f3"){
             
             
-            $contr = new CoursesContr();
-            $contr->addCoursecont();
-            header("location: ../classes/formation/view/formationProf_view.php?success=filesaved");
-            //unset($_SESSION['uploadedfilemoduleid']);
-            //unset($_SESSION['uploadedfilename']);
+            // $contr = new CoursesContr();
+            // $contr->addCoursecont();
+            // header("location: ../classes/formation/view/formationProf_view.php?success=filesaved");
+            // //unset($_SESSION['uploadedfilemoduleid']);
+            // //unset($_SESSION['uploadedfilename']);
         }
         elseif($action == "f4"){
             $_SESSION["required_view"] ="cours";      
@@ -183,25 +183,14 @@ use PhpParser\Node\Stmt\ElseIf_;
             
             $_SESSION["required_view"] = "choix_mod";
             $_SESSION["choix"] = "notes";
-            $_SESSION["prof-noter"] = "etudiants";
-            $_SESSION["fonction"] = "ajouternotes";
+             $_SESSION["prof-noter"] = "etudiants";
             $contr = new NotesContr();
             $contr-> getModulesByTeacher();
         }
         elseif($action == "f2"){
             $contr = new NotesContr();
-            $contr->getstudentsbymoduleidcontr(); 
-        }elseif($action == "f3"){
-            $_SESSION["required_view"] = "choix_mod";
-            $_SESSION["choix"] = "notes";
-            $_SESSION["prof-modifier-note"] = "etudiants";
-            $_SESSION["fonction"] = "modifiernotes";
-            $contr = new NotesContr();
-            $contr-> getModulesByTeacher();
-        }elseif($action == "f4"){
-            $contr = new NotesContr();
             $contr->getgradsbymoduleidContr(); 
         }
-        
+
     }
     
