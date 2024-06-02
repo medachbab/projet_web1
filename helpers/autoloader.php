@@ -13,18 +13,4 @@ class Autoloader{
     }
 }
 
-
-// class Autoloader {
-//     public static function register() {
-//         spl_autoload_register(function ($class) {
-//             // Replace namespace separators with directory separators
-//             $classPath = str_replace('\\', DIRECTORY_SEPARATOR, $class);
-//             $filename = __DIR__ . '\\..\\' . $classPath . '.php';
-//             if (file_exists($filename)) {
-//                 require $filename;
-//             }
-//             echo $filename;
-//         }); 
-//     }
-// }
 ?>
